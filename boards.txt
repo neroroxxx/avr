@@ -1,5 +1,6 @@
 # This is a modified file for boards for use with BMC
 # Only use this boards with the BMC library
+# BadassMIDI.com
 
 # Solution for Arduino IDE 2.0 recognizing changes to this file:
 # https://github.com/arduino/arduino-ide/issues/1030#issuecomment-1152005617
@@ -44,7 +45,7 @@ bmc_teensy41.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy41.build.flags.dep=-MMD
 bmc_teensy41.build.flags.optimize=-Os
 bmc_teensy41.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-bmc_teensy41.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=157
+bmc_teensy41.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=158
 bmc_teensy41.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
 bmc_teensy41.build.flags.c=
 bmc_teensy41.build.flags.S=-x assembler-with-cpp
@@ -218,7 +219,7 @@ bmc_teensyMM.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensyMM.build.flags.dep=-MMD
 bmc_teensyMM.build.flags.optimize=-Os
 bmc_teensyMM.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-bmc_teensyMM.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=157
+bmc_teensyMM.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=158
 bmc_teensyMM.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
 bmc_teensyMM.build.flags.c=
 bmc_teensyMM.build.flags.S=-x assembler-with-cpp
@@ -392,7 +393,7 @@ bmc_teensy40.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy40.build.flags.dep=-MMD
 bmc_teensy40.build.flags.optimize=-Os
 bmc_teensy40.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-bmc_teensy40.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=157
+bmc_teensy40.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=158
 bmc_teensy40.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
 bmc_teensy40.build.flags.c=
 bmc_teensy40.build.flags.S=-x assembler-with-cpp
@@ -562,7 +563,7 @@ bmc_teensy36.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy36.build.flags.dep=-MMD
 bmc_teensy36.build.flags.optimize=-Os
 bmc_teensy36.build.flags.cpu=-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant
-bmc_teensy36.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=157
+bmc_teensy36.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=158
 bmc_teensy36.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++14 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
 bmc_teensy36.build.flags.c=
 bmc_teensy36.build.flags.S=-x assembler-with-cpp
@@ -743,7 +744,7 @@ bmc_teensy35.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy35.build.flags.dep=-MMD
 bmc_teensy35.build.flags.optimize=-Os
 bmc_teensy35.build.flags.cpu=-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant
-bmc_teensy35.build.flags.defs=-D__MK64FX512__ -DTEENSYDUINO=157
+bmc_teensy35.build.flags.defs=-D__MK64FX512__ -DTEENSYDUINO=158
 bmc_teensy35.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++14 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
 bmc_teensy35.build.flags.c=
 bmc_teensy35.build.flags.S=-x assembler-with-cpp
@@ -915,7 +916,7 @@ bmc_teensy31.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy31.build.flags.dep=-MMD
 bmc_teensy31.build.flags.optimize=-Os
 bmc_teensy31.build.flags.cpu=-mthumb -mcpu=cortex-m4 -fsingle-precision-constant
-bmc_teensy31.build.flags.defs=-D__MK20DX256__ -DTEENSYDUINO=157
+bmc_teensy31.build.flags.defs=-D__MK20DX256__ -DTEENSYDUINO=158
 bmc_teensy31.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++14 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
 bmc_teensy31.build.flags.c=
 bmc_teensy31.build.flags.S=-x assembler-with-cpp
