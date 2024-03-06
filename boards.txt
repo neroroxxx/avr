@@ -45,8 +45,8 @@ bmc_teensy41.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy41.build.flags.dep=-MMD
 bmc_teensy41.build.flags.optimize=-Os
 bmc_teensy41.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-bmc_teensy41.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=158
-bmc_teensy41.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
+bmc_teensy41.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=159
+bmc_teensy41.build.flags.cpp=-std=gnu++17 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
 bmc_teensy41.build.flags.c=
 bmc_teensy41.build.flags.S=-x assembler-with-cpp
 bmc_teensy41.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
@@ -105,24 +105,24 @@ bmc_teensy41.menu.speed.24.build.fcpu=24000000
 bmc_teensy41.menu.opt.o2std=Faster
 bmc_teensy41.menu.opt.o2std.build.flags.optimize=-O2
 bmc_teensy41.menu.opt.o2std.build.flags.ldspecs=
-#bmc_teensy41.menu.opt.o2lto=Faster with LTO
-#bmc_teensy41.menu.opt.o2lto.build.flags.optimize=-O2 -flto -fno-fat-lto-objects
-#bmc_teensy41.menu.opt.o2lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy41.menu.opt.o2lto=Faster with LTO
+bmc_teensy41.menu.opt.o2lto.build.flags.optimize=-O2 -flto -fno-fat-lto-objects
+bmc_teensy41.menu.opt.o2lto.build.flags.ldspecs=-fuse-linker-plugin
 bmc_teensy41.menu.opt.o1std=Fast
 bmc_teensy41.menu.opt.o1std.build.flags.optimize=-O1
 bmc_teensy41.menu.opt.o1std.build.flags.ldspecs=
-#bmc_teensy41.menu.opt.o1lto=Fast with LTO
-#bmc_teensy41.menu.opt.o1lto.build.flags.optimize=-O1 -flto -fno-fat-lto-objects
-#bmc_teensy41.menu.opt.o1lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy41.menu.opt.o1lto=Fast with LTO
+bmc_teensy41.menu.opt.o1lto.build.flags.optimize=-O1 -flto -fno-fat-lto-objects
+bmc_teensy41.menu.opt.o1lto.build.flags.ldspecs=-fuse-linker-plugin
 bmc_teensy41.menu.opt.o3std=Fastest
 bmc_teensy41.menu.opt.o3std.build.flags.optimize=-O3
 bmc_teensy41.menu.opt.o3std.build.flags.ldspecs=
 #bmc_teensy41.menu.opt.o3purestd=Fastest + pure-code
 #bmc_teensy41.menu.opt.o3purestd.build.flags.optimize=-O3 -mpure-code -D__PURE_CODE__
 #bmc_teensy41.menu.opt.o3purestd.build.flags.ldspecs=
-#bmc_teensy41.menu.opt.o3lto=Fastest with LTO
-#bmc_teensy41.menu.opt.o3lto.build.flags.optimize=-O3 -flto -fno-fat-lto-objects
-#bmc_teensy41.menu.opt.o3lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy41.menu.opt.o3lto=Fastest with LTO
+bmc_teensy41.menu.opt.o3lto.build.flags.optimize=-O3 -flto -fno-fat-lto-objects
+bmc_teensy41.menu.opt.o3lto.build.flags.ldspecs=-fuse-linker-plugin
 #bmc_teensy41.menu.opt.o3purelto=Fastest + pure-code with LTO
 #bmc_teensy41.menu.opt.o3purelto.build.flags.optimize=-O3 -mpure-code -D__PURE_CODE__ -flto -fno-fat-lto-objects
 #bmc_teensy41.menu.opt.o3purelto.build.flags.ldspecs=-fuse-linker-plugin
@@ -135,9 +135,9 @@ bmc_teensy41.menu.opt.ogstd.build.flags.ldspecs=
 bmc_teensy41.menu.opt.osstd=Smallest Code
 bmc_teensy41.menu.opt.osstd.build.flags.optimize=-Os --specs=nano.specs
 bmc_teensy41.menu.opt.osstd.build.flags.ldspecs=
-#bmc_teensy41.menu.opt.oslto=Smallest Code with LTO
-#bmc_teensy41.menu.opt.oslto.build.flags.optimize=-Os -flto -fno-fat-lto-objects --specs=nano.specs
-#bmc_teensy41.menu.opt.oslto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy41.menu.opt.oslto=Smallest Code with LTO
+bmc_teensy41.menu.opt.oslto.build.flags.optimize=-Os -flto -fno-fat-lto-objects --specs=nano.specs
+bmc_teensy41.menu.opt.oslto.build.flags.ldspecs=-fuse-linker-plugin
 
 bmc_teensy41.menu.keys.en-us=US English
 bmc_teensy41.menu.keys.en-us.build.keylayout=US_ENGLISH
@@ -219,8 +219,8 @@ bmc_teensyMM.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensyMM.build.flags.dep=-MMD
 bmc_teensyMM.build.flags.optimize=-Os
 bmc_teensyMM.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-bmc_teensyMM.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=158
-bmc_teensyMM.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
+bmc_teensyMM.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=159
+bmc_teensyMM.build.flags.cpp=-std=gnu++17 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
 bmc_teensyMM.build.flags.c=
 bmc_teensyMM.build.flags.S=-x assembler-with-cpp
 bmc_teensyMM.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
@@ -279,24 +279,24 @@ bmc_teensyMM.menu.speed.24.build.fcpu=24000000
 bmc_teensyMM.menu.opt.o2std=Faster
 bmc_teensyMM.menu.opt.o2std.build.flags.optimize=-O2
 bmc_teensyMM.menu.opt.o2std.build.flags.ldspecs=
-#bmc_teensyMM.menu.opt.o2lto=Faster with LTO
-#bmc_teensyMM.menu.opt.o2lto.build.flags.optimize=-O2 -flto -fno-fat-lto-objects
-#bmc_teensyMM.menu.opt.o2lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensyMM.menu.opt.o2lto=Faster with LTO
+bmc_teensyMM.menu.opt.o2lto.build.flags.optimize=-O2 -flto -fno-fat-lto-objects
+bmc_teensyMM.menu.opt.o2lto.build.flags.ldspecs=-fuse-linker-plugin
 bmc_teensyMM.menu.opt.o1std=Fast
 bmc_teensyMM.menu.opt.o1std.build.flags.optimize=-O1
 bmc_teensyMM.menu.opt.o1std.build.flags.ldspecs=
-#bmc_teensyMM.menu.opt.o1lto=Fast with LTO
-#bmc_teensyMM.menu.opt.o1lto.build.flags.optimize=-O1 -flto -fno-fat-lto-objects
-#bmc_teensyMM.menu.opt.o1lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensyMM.menu.opt.o1lto=Fast with LTO
+bmc_teensyMM.menu.opt.o1lto.build.flags.optimize=-O1 -flto -fno-fat-lto-objects
+bmc_teensyMM.menu.opt.o1lto.build.flags.ldspecs=-fuse-linker-plugin
 bmc_teensyMM.menu.opt.o3std=Fastest
 bmc_teensyMM.menu.opt.o3std.build.flags.optimize=-O3
 bmc_teensyMM.menu.opt.o3std.build.flags.ldspecs=
 #bmc_teensyMM.menu.opt.o3purestd=Fastest + pure-code
 #bmc_teensyMM.menu.opt.o3purestd.build.flags.optimize=-O3 -mpure-code -D__PURE_CODE__
 #bmc_teensyMM.menu.opt.o3purestd.build.flags.ldspecs=
-#bmc_teensyMM.menu.opt.o3lto=Fastest with LTO
-#bmc_teensyMM.menu.opt.o3lto.build.flags.optimize=-O3 -flto -fno-fat-lto-objects
-#bmc_teensyMM.menu.opt.o3lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensyMM.menu.opt.o3lto=Fastest with LTO
+bmc_teensyMM.menu.opt.o3lto.build.flags.optimize=-O3 -flto -fno-fat-lto-objects
+bmc_teensyMM.menu.opt.o3lto.build.flags.ldspecs=-fuse-linker-plugin
 #bmc_teensyMM.menu.opt.o3purelto=Fastest + pure-code with LTO
 #bmc_teensyMM.menu.opt.o3purelto.build.flags.optimize=-O3 -mpure-code -D__PURE_CODE__ -flto -fno-fat-lto-objects
 #bmc_teensyMM.menu.opt.o3purelto.build.flags.ldspecs=-fuse-linker-plugin
@@ -309,9 +309,9 @@ bmc_teensyMM.menu.opt.ogstd.build.flags.ldspecs=
 bmc_teensyMM.menu.opt.osstd=Smallest Code
 bmc_teensyMM.menu.opt.osstd.build.flags.optimize=-Os --specs=nano.specs
 bmc_teensyMM.menu.opt.osstd.build.flags.ldspecs=
-#bmc_teensyMM.menu.opt.oslto=Smallest Code with LTO
-#bmc_teensyMM.menu.opt.oslto.build.flags.optimize=-Os -flto -fno-fat-lto-objects --specs=nano.specs
-#bmc_teensyMM.menu.opt.oslto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensyMM.menu.opt.oslto=Smallest Code with LTO
+bmc_teensyMM.menu.opt.oslto.build.flags.optimize=-Os -flto -fno-fat-lto-objects --specs=nano.specs
+bmc_teensyMM.menu.opt.oslto.build.flags.ldspecs=-fuse-linker-plugin
 
 bmc_teensyMM.menu.keys.en-us=US English
 bmc_teensyMM.menu.keys.en-us.build.keylayout=US_ENGLISH
@@ -393,8 +393,8 @@ bmc_teensy40.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy40.build.flags.dep=-MMD
 bmc_teensy40.build.flags.optimize=-Os
 bmc_teensy40.build.flags.cpu=-mthumb -mcpu=cortex-m7 -mfloat-abi=hard -mfpu=fpv5-d16
-bmc_teensy40.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=158
-bmc_teensy40.build.flags.cpp=-std=gnu++14 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
+bmc_teensy40.build.flags.defs=-D__IMXRT1062__ -DTEENSYDUINO=159
+bmc_teensy40.build.flags.cpp=-std=gnu++17 -fno-exceptions -fpermissive -fno-rtti -fno-threadsafe-statics -felide-constructors -Wno-error=narrowing -include "{build.source.path}/config.h"
 bmc_teensy40.build.flags.c=
 bmc_teensy40.build.flags.S=-x assembler-with-cpp
 bmc_teensy40.build.flags.libs=-larm_cortexM7lfsp_math -lm -lstdc++
@@ -453,24 +453,24 @@ bmc_teensy40.menu.speed.24.build.fcpu=24000000
 bmc_teensy40.menu.opt.o2std=Faster
 bmc_teensy40.menu.opt.o2std.build.flags.optimize=-O2
 bmc_teensy40.menu.opt.o2std.build.flags.ldspecs=
-#bmc_teensy40.menu.opt.o2lto=Faster with LTO
-#bmc_teensy40.menu.opt.o2lto.build.flags.optimize=-O2 -flto -fno-fat-lto-objects
-#bmc_teensy40.menu.opt.o2lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy40.menu.opt.o2lto=Faster with LTO
+bmc_teensy40.menu.opt.o2lto.build.flags.optimize=-O2 -flto -fno-fat-lto-objects
+bmc_teensy40.menu.opt.o2lto.build.flags.ldspecs=-fuse-linker-plugin
 bmc_teensy40.menu.opt.o1std=Fast
 bmc_teensy40.menu.opt.o1std.build.flags.optimize=-O1
 bmc_teensy40.menu.opt.o1std.build.flags.ldspecs=
-#bmc_teensy40.menu.opt.o1lto=Fast with LTO
-#bmc_teensy40.menu.opt.o1lto.build.flags.optimize=-O1 -flto -fno-fat-lto-objects
-#bmc_teensy40.menu.opt.o1lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy40.menu.opt.o1lto=Fast with LTO
+bmc_teensy40.menu.opt.o1lto.build.flags.optimize=-O1 -flto -fno-fat-lto-objects
+bmc_teensy40.menu.opt.o1lto.build.flags.ldspecs=-fuse-linker-plugin
 bmc_teensy40.menu.opt.o3std=Fastest
 bmc_teensy40.menu.opt.o3std.build.flags.optimize=-O3
 bmc_teensy40.menu.opt.o3std.build.flags.ldspecs=
 #bmc_teensy40.menu.opt.o3purestd=Fastest + pure-code
 #bmc_teensy40.menu.opt.o3purestd.build.flags.optimize=-O3 -mpure-code -D__PURE_CODE__
 #bmc_teensy40.menu.opt.o3purestd.build.flags.ldspecs=
-#bmc_teensy40.menu.opt.o3lto=Fastest with LTO
-#bmc_teensy40.menu.opt.o3lto.build.flags.optimize=-O3 -flto -fno-fat-lto-objects
-#bmc_teensy40.menu.opt.o3lto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy40.menu.opt.o3lto=Fastest with LTO
+bmc_teensy40.menu.opt.o3lto.build.flags.optimize=-O3 -flto -fno-fat-lto-objects
+bmc_teensy40.menu.opt.o3lto.build.flags.ldspecs=-fuse-linker-plugin
 #bmc_teensy40.menu.opt.o3purelto=Fastest + pure-code with LTO
 #bmc_teensy40.menu.opt.o3purelto.build.flags.optimize=-O3 -mpure-code -D__PURE_CODE__ -flto -fno-fat-lto-objects
 #bmc_teensy40.menu.opt.o3purelto.build.flags.ldspecs=-fuse-linker-plugin
@@ -483,9 +483,9 @@ bmc_teensy40.menu.opt.ogstd.build.flags.ldspecs=
 bmc_teensy40.menu.opt.osstd=Smallest Code
 bmc_teensy40.menu.opt.osstd.build.flags.optimize=-Os --specs=nano.specs
 bmc_teensy40.menu.opt.osstd.build.flags.ldspecs=
-#bmc_teensy40.menu.opt.oslto=Smallest Code with LTO
-#bmc_teensy40.menu.opt.oslto.build.flags.optimize=-Os -flto -fno-fat-lto-objects --specs=nano.specs
-#bmc_teensy40.menu.opt.oslto.build.flags.ldspecs=-fuse-linker-plugin
+bmc_teensy40.menu.opt.oslto=Smallest Code with LTO
+bmc_teensy40.menu.opt.oslto.build.flags.optimize=-Os -flto -fno-fat-lto-objects --specs=nano.specs
+bmc_teensy40.menu.opt.oslto.build.flags.ldspecs=-fuse-linker-plugin
 
 bmc_teensy40.menu.keys.en-us=US English
 bmc_teensy40.menu.keys.en-us.build.keylayout=US_ENGLISH
@@ -563,8 +563,8 @@ bmc_teensy36.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy36.build.flags.dep=-MMD
 bmc_teensy36.build.flags.optimize=-Os
 bmc_teensy36.build.flags.cpu=-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant
-bmc_teensy36.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=158
-bmc_teensy36.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++14 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
+bmc_teensy36.build.flags.defs=-D__MK66FX1M0__ -DTEENSYDUINO=159
+bmc_teensy36.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++17 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
 bmc_teensy36.build.flags.c=
 bmc_teensy36.build.flags.S=-x assembler-with-cpp
 bmc_teensy36.build.flags.ld=-Wl,--gc-sections,--relax,--defsym=__rtc_localtime={extra.time.local} "-T{build.core.path}/mk66fx1m0.ld"
@@ -744,8 +744,8 @@ bmc_teensy35.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy35.build.flags.dep=-MMD
 bmc_teensy35.build.flags.optimize=-Os
 bmc_teensy35.build.flags.cpu=-mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -fsingle-precision-constant
-bmc_teensy35.build.flags.defs=-D__MK64FX512__ -DTEENSYDUINO=158
-bmc_teensy35.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++14 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
+bmc_teensy35.build.flags.defs=-D__MK64FX512__ -DTEENSYDUINO=159
+bmc_teensy35.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++17 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
 bmc_teensy35.build.flags.c=
 bmc_teensy35.build.flags.S=-x assembler-with-cpp
 bmc_teensy35.build.flags.ld=-Wl,--gc-sections,--relax,--defsym=__rtc_localtime={extra.time.local} "-T{build.core.path}/mk64fx512.ld"
@@ -916,8 +916,8 @@ bmc_teensy31.build.flags.common=-g -Wall -ffunction-sections -fdata-sections -no
 bmc_teensy31.build.flags.dep=-MMD
 bmc_teensy31.build.flags.optimize=-Os
 bmc_teensy31.build.flags.cpu=-mthumb -mcpu=cortex-m4 -fsingle-precision-constant
-bmc_teensy31.build.flags.defs=-D__MK20DX256__ -DTEENSYDUINO=158
-bmc_teensy31.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++14 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
+bmc_teensy31.build.flags.defs=-D__MK20DX256__ -DTEENSYDUINO=159
+bmc_teensy31.build.flags.cpp=-fno-exceptions -fpermissive -felide-constructors -std=gnu++17 -Wno-error=narrowing -fno-rtti -include "{build.source.path}/config.h"
 bmc_teensy31.build.flags.c=
 bmc_teensy31.build.flags.S=-x assembler-with-cpp
 bmc_teensy31.build.flags.ld=-Wl,--gc-sections,--relax,--defsym=__rtc_localtime={extra.time.local} "-T{build.core.path}/mk20dx256.ld"
